@@ -1,0 +1,14 @@
+[package]
+name = "libyaml-rust-diff-fuzz"
+version = "0.1.0"
+edition = "2021"
+description = "Differential C-to-Rust migration harness for yaml/libyaml token scanner (src/scanner.c) using bindgen, ASan, and cargo-fuzz"
+license = "MIT"
+
+[dependencies]
+arbitrary = { version = "1.3", features = ["derive"] }
+libc = "0.2"
+
+[build-dependencies]
+cc = "1.0"
+bindgen = "0.69"
